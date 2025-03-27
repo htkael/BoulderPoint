@@ -10,5 +10,16 @@
     "jsonwebtoken": "^9.0.2",
     "prisma": "^6.5.0",
     "puppeteer": "^24.4.0"
-  }
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
