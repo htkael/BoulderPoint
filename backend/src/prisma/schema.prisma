@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ClimbingLocation {
+  id    String    @id @default(uuid())
+  name  String
+  type  String
+  difficulty  String?
+  latitude  Float
+  longitude Float
+  address   String?
+  description String?
+  website   String?
+  imageUrl  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
+}
