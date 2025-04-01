@@ -22,15 +22,3 @@ export interface ClimbingLocation {
   createdAt: Date;
   updatedAt: Date;
 }
-
-export interface GetLocationsRequest {
-  latitude?: number;
-  longitude?: number;
-  radius?: number;
-  types?: ClimbingType[];
-}
-
-export interface GetLocationsResponse {
-  locations: ClimbingLocation[];
-  total: number;
-}

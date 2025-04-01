@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import { CustomServerError } from "./customErrors";
 
 interface CustomError extends Error {
   statusCode?: number;
@@ -20,6 +21,12 @@ const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
+  if (!err.statusCode) {
+    const serverError = new CustomServerError(
+      err.message || "An unexpected error occurred"
+    );
+    err = serverError;
+  }
   const statusCode = err.statusCode || 500;
   const errorResponse: ErrorResponse = {
     success: false,

@@ -1,4 +1,4 @@
-class CustomNotFoundError extends Error {
+export class CustomNotFoundError extends Error {
   statusCode: number;
 
   constructor(message: string) {
@@ -7,7 +7,7 @@ class CustomNotFoundError extends Error {
     this.name = "NotFoundError";
   }
 }
-class CustomBadRequestError extends Error {
+export class CustomBadRequestError extends Error {
   statusCode: number;
 
   constructor(message: string) {
@@ -16,7 +16,7 @@ class CustomBadRequestError extends Error {
     this.name = "BadRequestError";
   }
 }
-class CustomUnauthorizedError extends Error {
+export class CustomUnauthorizedError extends Error {
   statusCode: number;
 
   constructor(message: string) {
@@ -25,7 +25,7 @@ class CustomUnauthorizedError extends Error {
     this.name = "UnauthorizedError";
   }
 }
-class CustomValidationError extends Error {
+export class CustomValidationError extends Error {
   statusCode: number;
   errors?: any;
   formData?: any;
@@ -38,7 +38,7 @@ class CustomValidationError extends Error {
     this.formData = formData || null;
   }
 }
-class CustomServerError extends Error {
+export class CustomServerError extends Error {
   statusCode: number;
 
   constructor(message: string) {
