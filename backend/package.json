@@ -9,7 +9,10 @@
     "build": "tsc",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "prisma:studio": "prisma studio"
+    "prisma:studio": "prisma studio",
+    "scrape": "ts-node src/commands/runScrapers.ts",
+    "prisma:postgis": "psql -h localhost -U hunterkael -d boulder_point -f src/prisma/migrations/custom/add_postgis_point.sql",
+    "setup": "ts-node src/commands/setupDatabase.ts"
   },
   "keywords": [],
   "author": "",
